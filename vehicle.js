@@ -52,6 +52,7 @@ class Vehicle {
         }
     }
     stop() {
+        console.log("out of fuel.");
         this.started = false;
     }
 

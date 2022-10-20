@@ -1,9 +1,9 @@
 //this includes the vehicle class as a module
-const VehicleModule = require("./vehicleBaseClass").Vehicle
+const VehicleModule = require("./vehicle.js")
 
-class Car extends VehicleModule {
+class Car extends VehicleModule.Vehicle {
     constructor(make, model, year, color, mileage){
-        super(make. model, year, color, mileage);
+        super(make, model, year, color, mileage);
         this.maxPassengers = 5;
         this.passenger = 0;
         this.numberOfWheels = 4;
@@ -44,7 +44,7 @@ class Car extends VehicleModule {
 
 
 //this shows how to call from this module...
-let v = new VehicleModule.Vehicle("Mecury", "Sedan", "1965", "color", "mileage");
+let v = new Car("Mecury", "Sedan", "1965", "color", "mileage");
 v.start()
 v.loadPassenger(5)
 v.checkService()
